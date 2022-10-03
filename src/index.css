@@ -41,3 +41,11 @@ iframe {
     width: 40rem;
     height: 20rem;
 }
+.btnList {
+    width: 7rem;
+    position: absolute;
+    top: 10.5rem;
+}
+/* .search {
+    border-bottom: #D9D9D9 solid 1px;
+} */

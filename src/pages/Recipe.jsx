@@ -56,7 +56,7 @@ function Recipe() {
                 ) : null}
             </div>
         )}
-        <button className="btn green darken-1" onClick={() => navigate(-1)}>Go Back</button>
+        <button className="btn" onClick={() => navigate(-1)}>Go Back</button>
     </>;
 }
 export { Recipe };

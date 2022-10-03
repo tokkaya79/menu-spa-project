@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {useNavigate} from 'react-router-dom'
 
 function Search({cb = Function.prototype}) { //принимает колбек снаружи
     const [value, setValue] = useState('') //изночально value пустой
@@ -12,11 +13,13 @@ function Search({cb = Function.prototype}) { //принимает колбек �
     const handleSubmit = () => {
             cb(value)
     }
+    const navigate = useNavigate()
 
 
     return <div className="row">
+        
         <div className="input-field col s12">
-            <input 
+            <input
                 type="search"
                 id="search-field"
                 placeholder="search"
@@ -25,7 +28,7 @@ function Search({cb = Function.prototype}) { //принимает колбек �
                 value={value} 
             />
              <button 
-                className="btn"
+                className="btn "
                 style={{
                     position: 'absolute',
                     top: 0,
@@ -34,6 +37,7 @@ function Search({cb = Function.prototype}) { //принимает колбек �
                 onClick={handleSubmit}
                 >Search
             </button>
+            <button className="btn " onClick={() => navigate(0)}>Go Back</button>
 
         </div>
     </div>

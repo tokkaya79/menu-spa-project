@@ -14,7 +14,7 @@ function Category() {
     }, [name]);
 
     return <>
-    <button className="btn green darken-1" onClick={() => navigate(-1)}>Go Back</button>
+    <button className="btn" onClick={() => navigate(-1)}>Go Back</button>
     {!meals.length ? <Preloader /> : <MealList meals={meals} />}</>;
 }
 export { Category };
